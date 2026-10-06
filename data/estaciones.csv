@@ -1,0 +1,122 @@
+codigo,nombre,codigo_linea,troncal,es_portal,es_transbordo
+02001,Centro Comercial Santa Fe,33,Zona B AutoNorte,0,0
+02102,Calle 161,33,Zona B AutoNorte,0,0
+02103,Mazurén,33,Zona B AutoNorte,0,0
+02104,Calle 146,33,Zona B AutoNorte,0,0
+02105,Calle 142,33,Zona B AutoNorte,0,0
+02201,Prado,33,Zona B AutoNorte,0,0
+02202,Calle 127,33,Zona B AutoNorte,0,0
+02502,Terminal,33,Zona B AutoNorte,0,0
+03000,Portal Suba,32,Zona C Av. Suba,1,0
+03001,LA CAMPIÑA,32,Zona C Av. Suba,0,0
+03002,SUBA - TV- 91,32,Zona C Av. Suba,0,0
+03003,21 ANGELES,32,Zona C Av. Suba,0,0
+03004,GRATAMIRA,32,Zona C Av. Suba,0,0
+03005,SUBA - AV. BOYACA,32,Zona C Av. Suba,0,0
+03006,NIZA - CALLE 127,32,Zona C Av. Suba,0,0
+03007,HUMEDAL CORDOBA,32,Zona C Av. Suba,0,0
+03009,Av. Suba- Calle 116,32,Zona C Av. Suba,0,0
+03010,PUENTE LARGO,32,Zona C Av. Suba,0,0
+03011,SUBA - CALLE 100,32,Zona C Av. Suba,0,0
+03012,SUBA - CALLE 95,32,Zona C Av. Suba,0,0
+03013,RIO NEGRO,32,Zona C Av. Suba,0,0
+03014,SAN MARTIN,32,Zona C Av. Suba,0,0
+04000,Cabecera Calle 80,35,Zona D Calle 80,0,0
+04001,Quirigua,35,Zona D Calle 80,0,0
+04002,Carrera 90,35,Zona D Calle 80,0,0
+04003,Avenida Ciudad de Cali,35,Zona D Calle 80,0,0
+04004,La Granja,35,Zona D Calle 80,0,0
+04100,Carrera 77,35,Zona D Calle 80,0,0
+04101,Minuto de Dios,35,Zona D Calle 80,0,0
+04102,Avenida Boyaca,35,Zona D Calle 80,0,0
+04103,Las Ferias,35,Zona D Calle 80,0,0
+04104,Avenida 68,35,Zona D Calle 80,0,0
+04105,Carrera 53,35,Zona D Calle 80,0,0
+04106,Carrera 47,35,Zona D Calle 80,0,0
+04107,Escuela Militar,35,Zona D Calle 80,0,0
+05000,Portal Américas,31,Zona F Av. Américas,1,0
+05002,Tintal,31,Zona F Av. Américas,0,0
+05005,Transversal 86,31,Zona F Av. Américas,0,0
+05100,Banderas P. Central,31,Zona F Av. Américas,0,0
+05101,Mandalay - Cr.73,31,Zona F Av. Américas,0,0
+05102,Av. Américas - Av. Boyacá,31,Zona F Av. Américas,0,0
+05103,Marsella,31,Zona F Av. Américas,0,0
+05105,Pradera – Plaza Central,31,Zona F Av. Américas,0,0
+05107,Américas - Cr.53,31,Zona F Av. Américas,0,0
+06001,Modelia,11,Zona K Calle 26,0,0
+06002,Normandía,11,Zona K Calle 26,0,0
+06104,Gobernación,11,Zona K Calle 26,0,0
+06105,Quinta Paredes,11,Zona K Calle 26,0,0
+06106,Corferias,11,Zona K Calle 26,0,0
+06108,Concejo de Bogotá,11,Zona K Calle 26,0,0
+06109,Centro Memoria,11,Zona K Calle 26,0,0
+07001,PERDOMO,30,Zona G NQS Sur,0,0
+07002,MADELENA,30,Zona G NQS Sur,0,0
+07003,SEVILLANA,30,Zona G NQS Sur,0,0
+07004,VENECIA,30,Zona G NQS Sur,0,0
+07005,ALQUERIA,30,Zona G NQS Sur,0,0
+07006,General Santander,30,Zona G NQS Sur,0,0
+07008,NQS - Calle 30 Sur,30,Zona G NQS Sur,0,0
+07010,Bosa,30,Zona G NQS Sur,0,0
+07101,CASTELLANA,38,Zona E NQS Central,0,0
+07103,AV. CHILE,38,Zona E NQS Central,0,0
+07105,MOVISTAR ARENA,38,Zona E NQS Central,0,0
+07106,EL CAMPIN,38,Zona E NQS Central,0,0
+07107,U. NACIONAL,38,Zona E NQS Central,0,0
+07108,Av. El Dorado,38,Zona E NQS Central,0,0
+07109,CAD,38,Zona E NQS Central,0,0
+07110,PALOQUEMAO,38,Zona E NQS Central,0,0
+07111,NQS - RICAURTE,38,Zona E NQS Central,0,1
+07112,COMUNEROS,30,Zona G NQS Sur,0,0
+07113,SANTA ISABEL,30,Zona G NQS Sur,0,0
+07200,Tygua-San José,38,Zona E NQS Central,0,0
+07201,Guatoque -Veraguas,38,Zona E NQS Central,0,0
+07503,SAN MATEO - C.C. UNISUR,30,Zona G NQS Sur,0,0
+07504,TERREROS,30,Zona G NQS Sur,0,0
+07505,LEON XIII,30,Zona G NQS Sur,0,0
+07506,DESPENSA,30,Zona G NQS Sur,0,0
+08000,Portal Tunal,34,Zona H Caracas Sur,1,1
+08001,Parque el Tunal,34,Zona H Caracas Sur,0,0
+08002,Biblioteca,34,Zona H Caracas Sur,0,0
+08100,Portal Tunal Cable,34,Zona H Caracas Sur,0,1
+09000,Cabecera Usme,34,Zona H Caracas Sur,0,0
+09001,Molinos,34,Zona H Caracas Sur,0,0
+09002,Consuelo,34,Zona H Caracas Sur,0,0
+09003,Socorro,34,Zona H Caracas Sur,0,0
+09004,Santa Lucía,34,Zona H Caracas Sur,0,0
+09005,Danubio,34,Zona H Caracas Sur,0,0
+09100,Calle 40 Sur,34,Zona H Caracas Sur,0,0
+09101,Quiroga,34,Zona H Caracas Sur,0,0
+09103,Olaya,34,Zona H Caracas Sur,0,0
+09104,Restrepo,34,Zona H Caracas Sur,0,0
+09105,Río Fucha,34,Zona H Caracas Sur,0,0
+09106,Nariño,34,Zona H Caracas Sur,0,0
+09107,Hortúa,34,Zona H Caracas Sur,0,0
+09114,Calle 26,36,Zona A Caracas,0,0
+09123,Calle 76,36,Zona A Caracas,0,0
+10000,Portal 20 de Julio,12,Zona L Carrera 10,1,0
+10001,Country Sur,12,Zona L Carrera 10,0,0
+10002,Av. Primero de Mayo,12,Zona L Carrera 10,0,0
+10003,Ciudad Jardín,12,Zona L Carrera 10,0,0
+10004,Policarpa,12,Zona L Carrera 10,0,0
+10005,Bicentenario,12,Zona L Carrera 10,0,0
+10006,SAN VICTORINO - NEOS CENTRO,12,Zona L Carrera 10,0,0
+10007,Las Nieves,12,Zona L Carrera 10,0,0
+10008,San Diego,12,Zona L Carrera 10,0,0
+10010,San Bernardo,12,Zona L Carrera 10,0,0
+12000,Puente Aranda,39,Zona F Calle 13,0,0
+12002,CDS - Carrera 32,39,Zona F Calle 13,0,0
+12003,Ricaurte,39,Zona F Calle 13,0,1
+12004,Carrera 22,39,Zona F Calle 13,0,0
+12007,Zona Industrial,39,Zona F Calle 13,0,0
+14001,La Sabana,39,Zona F Calle 13,0,0
+14004,Museo del Oro,37,Zona J Eje Ambiental,0,0
+15001,Tibanica - Primavera,42,Zona Z Av. Cali Sur,0,0
+15002,Los Laureles,42,Zona Z Av. Cali Sur,0,0
+15003,Islandia,42,Zona Z Av. Cali Sur,0,0
+40000,Cable Portal Tunal,40,Zona T Ciudad Bolívar,0,1
+40001,Juan Pablo II,40,Zona T Ciudad Bolívar,0,0
+40002,Manitas,40,Zona T Ciudad Bolívar,0,0
+40003,Mirador del Paraiso,40,Zona T Ciudad Bolívar,0,0
+50003,Corral Molinos,34,Zona H Caracas Sur,0,0
+57503,Ampliacion San Mateo,30,Zona G NQS Sur,0,0
