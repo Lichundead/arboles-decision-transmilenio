@@ -8,7 +8,7 @@ que sus 16 reglas se pueden leer y explicar.
 
 ## Requisitos
 
-- Python 3.11 o superior.
+- Python 3.12 o superior.
 - Las librerías de [requirements.txt](requirements.txt), con versiones fijas: pandas,
   scikit-learn, openpyxl, matplotlib y pytest.
 
@@ -43,14 +43,13 @@ Los comandos siguientes suponen que el entorno está activado.
 | Comando | Qué hace |
 |---|---|
 | `python src/main.py` | Programa interactivo. Entrena el árbol, muestra su exactitud y permite ver las reglas o consultar una estación, un día y una hora. |
-| `python src/evaluacion.py` | Informe: reporte por clase, matriz de confusión, importancia de variables, comparación de profundidades. Guarda las figuras en [docs/figuras/](docs/figuras/). |
+| `python src/evaluacion.py` | Informe: reporte por clase, matriz de confusión, importancia de variables, comparación de profundidades (exactitud y F1 macro). Guarda las figuras en [docs/figuras/](docs/figuras/). |
 | `python src/preparar_datos.py` | Regenera `data/processed/dataset_demanda.csv` a partir del Excel original. |
 | `pytest` | Corre las 7 pruebas (unos 3 segundos). Están descritas en [docs/pruebas.md](docs/pruebas.md). |
 
-El CSV procesado ya está en el repositorio, así que `main.py`, `evaluacion.py` y las pruebas
-funcionan sin el Excel. Para correr `preparar_datos.py` hay que descargar el Excel (ver
-[Datos](#datos)) y guardarlo como
-`data/raw/08_TM_Resumen_de_Validaciones_Troncales_al_31_de_Agosto_del_2026_Intervalo_15_Mint.xlsx`.
+El Excel original está en
+`data/raw/08_TM_Resumen_de_Validaciones_Troncales_al_31_de_Agosto_del_2026_Intervalo_15_Mint.xlsx`
+y el CSV que se genera a partir de él, en `data/processed/dataset_demanda.csv`.
 
 El modelo no se guarda en ningún archivo. Cada programa lo entrena de nuevo, lo que tarda
 unos segundos.
@@ -85,8 +84,10 @@ TRANSMILENIO S.A. publica las validaciones mensuales del sistema troncal por fra
 de datos abiertos de Bogotá: <https://datosabiertos.bogota.gov.co/organization/transmilenio>.
 
 Este trabajo usa el mes de agosto de 2026: 121 estaciones, franjas de 05:00 a 21:45 y
-253.394 filas. Las columnas y la definición de la clase (tercios de validaciones por
-estación) están en [docs/descripcion_datos.md](docs/descripcion_datos.md).
+253.394 filas. Las columnas, la definición de la clase (tercios de validaciones por
+estación) y las estaciones que no están en el dataset se explican en
+[docs/descripcion_datos.md](docs/descripcion_datos.md). Las conclusiones aplican a esas
+121 estaciones, no a todo TransMilenio.
 
 ## Arquitectura
 
@@ -112,7 +113,7 @@ modelo.py           carga, separa por fecha, entrena, reglas y explicación
 |---|---|
 | [src/preparar_datos.py](src/preparar_datos.py) | `preparar` |
 | [src/modelo.py](src/modelo.py) | `cargar_datos`, `codificar`, `separar`, `entrenar`, `reglas`, `explicar` |
-| [src/evaluacion.py](src/evaluacion.py) | `linea_base`, `evaluar`, `importancias`, `comparar_profundidades`, `dibujar_arbol`, `dibujar_matriz` |
+| [src/evaluacion.py](src/evaluacion.py) | `linea_base`, `evaluar`, `comparar_profundidades`, `dibujar_arbol`, `dibujar_matriz` |
 | [src/main.py](src/main.py) | `consultar`, `main` |
 | [tests/test_demanda.py](tests/test_demanda.py) | 7 pruebas |
 
@@ -134,22 +135,11 @@ siempre responde "baja" (la clase más frecuente en entrenamiento), acierta el 2
 | Domingo o festivo, hasta las 19:15 | baja (media en portales temprano y en Ciudad Bolívar) |
 | Desde las 19:30 | baja (con excepciones por troncal) |
 
-Las variables que más pesan son `hora` (0,40), `dia_semana` (0,32) y `es_festivo` (0,26).
-Las troncales y `es_portal` suman menos de 0,03, y el árbol nunca usa `es_transbordo`.
+La semana de prueba no tiene festivos, así que las reglas de festivo no se evalúan.
 
-El error más común es la hora pico de la tarde, que el árbol marca como media cuando es
-alta: acierta solo el 29 % de las franjas altas. La semana de prueba no tiene festivos,
-así que las reglas de festivo no se evalúan.
-
-Exactitud en prueba según la profundidad:
-
-| Profundidad | Hojas | Exactitud |
-|---|---|---|
-| 2 | 4 | 0,570 |
-| 3 | 8 | 0,572 |
-| 4 | 16 | 0,543 |
-| 5 | 32 | 0,579 |
-| 6 | 62 | 0,594 |
+El reporte por clase, la matriz de confusión, la importancia de las variables y la
+comparación de profundidades (exactitud y F1 macro), con su explicación, están en
+[docs/pruebas.md](docs/pruebas.md#interpretación-de-resultados).
 
 Las figuras están en [docs/figuras/arbol.png](docs/figuras/arbol.png) y
 [docs/figuras/matriz_confusion.png](docs/figuras/matriz_confusion.png). En el dibujo del

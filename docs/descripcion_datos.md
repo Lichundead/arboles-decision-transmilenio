@@ -28,6 +28,22 @@ Al final comprueba que queden exactamente 121 estaciones.
 - Estaciones: 121. La estación `08100` (Portal Tunal Cable, del TransMiCable) solo tiene 14 franjas por día; las demás tienen 68.
 - No hay valores vacíos.
 
+## Estaciones que no están en el dataset
+
+El dataset no tiene todas las estaciones troncales del sistema. La troncal Caracas
+aparece con solo 2 estaciones y la AutoNorte con 8. No están, por ejemplo, Portal Norte,
+Héroes ni Av. Jiménez.
+
+Esas estaciones sí vienen en el Excel, pero solo en filas cuya `Fase` es "Dual", y
+`preparar_datos.py` descarta todas las filas de esa fase. En el Excel de agosto hay 32
+estaciones troncales en esa situación (más un corral y un bicicletero), con 13,7 millones
+de validaciones en el mes. Entre ellas están Portal Norte, Portal El Dorado, Portal Sur,
+Calle 100, Toberín, Héroes, Av. Jiménez y las estaciones temporales de la Caracas.
+Ninguna coincide con las 121 del dataset.
+
+Las conclusiones de este trabajo aplican a las 121 estaciones del dataset, no a todo
+TransMilenio.
+
 ## Columnas
 
 | Columna | Tipo | Descripción | ¿Atributo del árbol? |
