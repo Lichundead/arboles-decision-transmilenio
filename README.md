@@ -40,16 +40,30 @@ Los comandos siguientes suponen que el entorno está activado.
 
 ## Ejecución
 
-| Comando | Qué hace |
+Para usar el programa basta con un comando:
+
+```bash
+python src/main.py
+```
+
+Entrena el árbol, muestra su exactitud frente a la línea base y abre un menú para ver
+las reglas o consultar una estación en un día y una hora. Los datos ya preparados vienen
+en el repositorio (`data/processed/dataset_demanda.csv`), así que no hay que correr antes
+ningún otro archivo.
+
+Los demás comandos son pasos aparte y se corren solo cuando hacen falta:
+
+| Comando | Cuándo correrlo |
 |---|---|
-| `python src/main.py` | Programa interactivo. Entrena el árbol, muestra su exactitud y permite ver las reglas o consultar una estación, un día y una hora. |
-| `python src/evaluacion.py` | Informe: reporte por clase, matriz de confusión, importancia de variables, comparación de profundidades (exactitud y F1 macro). Guarda las figuras en [docs/figuras/](docs/figuras/). |
-| `python src/preparar_datos.py` | Regenera `data/processed/dataset_demanda.csv` a partir del Excel original. |
-| `pytest` | Corre las 7 pruebas (unos 3 segundos). Están descritas en [docs/pruebas.md](docs/pruebas.md). |
+| `python src/evaluacion.py` | Para sacar el informe: reporte por clase, matriz de confusión, importancia de variables y comparación de profundidades (exactitud y F1 macro). Guarda las figuras en [docs/figuras/](docs/figuras/). |
+| `python src/preparar_datos.py` | Solo si cambia el Excel original. Vuelve a generar el CSV a partir de él. |
+| `pytest` | Para comprobar que todo funciona. Corre las 7 pruebas en unos 3 segundos; están descritas en [docs/pruebas.md](docs/pruebas.md). |
+
+Si se reemplaza el Excel, el orden es `python src/preparar_datos.py`, luego `pytest` y
+después `python src/main.py` o `python src/evaluacion.py`.
 
 El Excel original está en
-`data/raw/08_TM_Resumen_de_Validaciones_Troncales_al_31_de_Agosto_del_2026_Intervalo_15_Mint.xlsx`
-y el CSV que se genera a partir de él, en `data/processed/dataset_demanda.csv`.
+`data/raw/08_TM_Resumen_de_Validaciones_Troncales_al_31_de_Agosto_del_2026_Intervalo_15_Mint.xlsx`.
 
 El modelo no se guarda en ningún archivo. Cada programa lo entrena de nuevo, lo que tarda
 unos segundos.
